@@ -1,0 +1,10 @@
+{
+  "name": "I love following",
+  "description": "Not For you",
+  "version": "1",
+  "manifest_version": 3,
+  "content_scripts": [{
+    "js": ["content.js"],
+    "matches": ["https://twitter.com/home"]
+  }]
+}
