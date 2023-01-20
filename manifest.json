@@ -5,6 +5,7 @@
   "manifest_version": 3,
   "content_scripts": [{
     "js": ["content.js"],
-    "matches": ["https://twitter.com/home"]
+    "matches": ["https://twitter.com/", "https://twitter.com/home"],
+    "runAt": "document_end"
   }]
 }
