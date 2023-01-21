@@ -20,7 +20,7 @@ function waitForElement(querySelector, timeout){
 	});
 }
 
-p = waitForElement('[href="/home"][role="tab"][aria-selected="false"]', 3000);
+p = waitForElement('[href="/home"][role="tab"][aria-selected="false"]', 5000);
 p.then(()=> {
 	var a = document.querySelectorAll('[href="/home"][role="tab"][aria-selected="false"]');
 	if (a.length > 0) {
@@ -30,4 +30,4 @@ p.then(()=> {
 });
 p.catch(()=> {
 	console.log("Catch: failed to detect tab entries");
-}
+});
