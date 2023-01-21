@@ -24,6 +24,5 @@ console.log("loaded");
 
 waitForElement('[href="/home"][role="tab"][aria-selected="false"]', 1000).then(()=> {
 	var a = document.querySelectorAll('[href="/home"][role="tab"][aria-selected="false"]');
-	console.log(a.length);
-	a[0].click();
+	if (a.length > 0) a[0].click(); 
 });
