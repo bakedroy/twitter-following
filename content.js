@@ -20,7 +20,7 @@ function waitForElement(querySelector, timeout){
 	});
 }
 
-p = waitForElement('[href="/home"][role="tab"][aria-selected="false"]', 1000);
+p = waitForElement('[href="/home"][role="tab"][aria-selected="false"]', 3000);
 p.then(()=> {
 	var a = document.querySelectorAll('[href="/home"][role="tab"][aria-selected="false"]');
 	if (a.length > 0) {
