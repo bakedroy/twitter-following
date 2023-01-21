@@ -20,9 +20,14 @@ function waitForElement(querySelector, timeout){
 	});
 }
 
-console.log("loaded");
-
-waitForElement('[href="/home"][role="tab"][aria-selected="false"]', 1000).then(()=> {
+p = waitForElement('[href="/home"][role="tab"][aria-selected="false"]', 1000);
+p.then(()=> {
 	var a = document.querySelectorAll('[href="/home"][role="tab"][aria-selected="false"]');
-	if (a.length > 0) a[0].click(); 
+	if (a.length > 0) {
+		a[0].click(); 
+		console.log("Then: Success! Following is better than For you!");
+	}
 });
+p.catch(()=> {
+	console.log("Catch: failed to detect tab entries");
+}
